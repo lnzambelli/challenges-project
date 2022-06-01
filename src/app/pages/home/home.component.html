@@ -1,0 +1,7 @@
+
+<img src="../../../assets/img/portada.jpg" alt="12 retos" class="imgHome">
+<div class="containerCard">
+    <div *ngFor="let challenge of this.listChallenges" class="listCard" >
+        <app-card-challenge [challenge]="challenge" class="card"></app-card-challenge>
+    </div>
+</div>

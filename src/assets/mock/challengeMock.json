@@ -1,0 +1,40 @@
+{
+    "challenge": [
+        {
+            "id": 1,
+            "title": "CONECTA 4",
+            "urlImg": "assets/img/memorygame.png",
+            "route": "/conecta"
+        },
+        {
+            "id": 2,
+            "title": "LA ENCICLOPEDIA STAR WARS",
+            "urlImg": "assets/img/memorygame.png",
+            "route": "/enciclopedia"
+        },
+        {
+            "id": 3,
+            "title": "CUESTIONARIO CONTRARRELOJ",
+            "urlImg": "assets/img/memorygame.png",
+            "route": "/cuestionario"
+        },
+        {
+            "id": 4,
+            "title": "POMODORO",
+            "urlImg": "assets/img/memorygame.png",
+            "route": "/pomodoro"
+        },
+        {
+            "id": 5,
+            "title": "MEMORY GAME",
+            "urlImg": "assets/img/memorygame.png",
+            "route": "/memory"
+        },
+        {
+            "id": 6,
+            "title": "CLONANDO TWITTER",
+            "urlImg": "assets/img/memorygame.png",
+            "route": "/clon"
+        }
+      ]
+}

@@ -1,0 +1,18 @@
+.imgHome{
+    width: 100%;
+}
+
+.containerCard{
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.card{
+    margin: 16px;
+}
+
+.listCard{
+    margin: 8px;
+}
