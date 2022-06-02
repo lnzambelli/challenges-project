@@ -4,7 +4,9 @@
         <button mat-fab color="primary" (click)="reinciarJuego()">
             <mat-icon>restart_alt</mat-icon>
         </button>
-        <h2 *ngIf="ganadorEncontrado==0">Turno del jugador Nº {{usuarioActivo}}</h2>
+        <h2 *ngIf="ganadorEncontrado==0">
+            Turno del jugador {{usuarioActivo}} {{usuarioActivo | fichas}}
+        </h2>
     </mat-card>
     <ng-template #juegoTerminado>Juego Terminado!!</ng-template>
 </section>
@@ -19,6 +21,6 @@
 
 <section *ngIf="ganadorEncontrado!=0">
     <mat-card class="titulo" >
-        Ganoo del jugador Nº {{ganadorEncontrado}}
+        Gano del jugador {{ganadorEncontrado}} {{ganadorEncontrado | fichas}} 
     </mat-card>
 </section>

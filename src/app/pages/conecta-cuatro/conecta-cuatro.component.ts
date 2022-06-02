@@ -73,11 +73,70 @@ export class ConectaCuatroComponent implements OnInit {
   }
 
   controlColumna(jugador: number){
-
+    let contador = 0;
+    let cantidad = 0;
+    for(let i=0; i<7;i++){
+      contador = 0;
+      for(let aux=i; aux<42; aux=aux+7){
+        if(cantidad%6==0){
+            contador=0
+        }
+        if(jugador==this.items[aux]){
+            contador++;
+            if(contador==4){
+              this.ganadorEncontrado=jugador;
+            }
+        }else{
+          contador=0
+        }
+        cantidad++;
+      }
+    }
   }
 
   controlDiagonal(jugador: number){
 
+    //diagonal hacia la derecha
+    let contador = 0;
+    let cantidad = 0;
+    for(let i=0; i<21;i++){
+      contador = 0;
+      for(let aux=i; aux<42; aux=aux+8){
+        if(aux>42){
+            contador=0
+        }
+        if(jugador==this.items[aux]){
+            contador++;
+            if(contador==4){
+              this.ganadorEncontrado=jugador;
+            }
+        }else{
+          contador=0
+        }
+        cantidad++;
+      }
+    }
+
+    //diagonal hacia la izquierda
+    contador = 0;
+    cantidad = 0;
+    for(let i=1; i<21;i++){
+      contador = 0;
+      for(let aux=i; aux<42; aux=aux+6){
+        if(aux>42){
+            contador=0
+        }
+        if(jugador==this.items[aux]){
+            contador++;
+            if(contador==4){
+              this.ganadorEncontrado=jugador;
+            }
+        }else{
+          contador=0
+        }
+        cantidad++;
+      }
+    }
   }
 
 }
