@@ -50,7 +50,7 @@ export class ConectaCuatroComponent implements OnInit {
   comprobarResultados(jugador: number){
       this.controlFilas(jugador)
       this.controlColumna(jugador)
-      this.controlDiagonal(jugador)
+      this.controlDiagonales(jugador)
   }
 
   controlFilas(jugador: number){
@@ -63,7 +63,7 @@ export class ConectaCuatroComponent implements OnInit {
         if(jugador==us){
             contador++;
             if(contador==4){
-              this.ganadorEncontrado=jugador;
+                this.ganadorEncontrado=jugador;
             }
         }else{
           contador=0
@@ -93,50 +93,37 @@ export class ConectaCuatroComponent implements OnInit {
       }
     }
   }
-
-  controlDiagonal(jugador: number){
-
-    //diagonal hacia la derecha
-    let contador = 0;
-    let cantidad = 0;
-    for(let i=0; i<21;i++){
-      contador = 0;
-      for(let aux=i; aux<42; aux=aux+8){
-        if(aux>42){
-            contador=0
-        }
-        if(jugador==this.items[aux]){
-            contador++;
+  
+  
+  controlDiagonales(jugador: number){
+    let arrDiagonal = ['0 8 16 24 32 40',
+                      '1 9 17 25 33 41', 
+                      '2 10 18 26 34', 
+                      '3 11 19 27',
+                      '7 15 23 31 39',
+                      '14 22 30 38',
+                      '21 15 9 3',
+                      '22 16 10 4', 
+                      '35 29 23 17 11 5', 
+                      '36 30 24 18 12 6',
+                      '37 31 25 19 13',
+                      '38 32 26 20'
+                      ]
+     for(let arr of arrDiagonal){
+       let arrNum = arr.split(' ')
+       let contador = 0;
+       for(let num of arrNum){
+          if(jugador== this.items[Number(num)]){
+            contador++
             if(contador==4){
               this.ganadorEncontrado=jugador;
             }
         }else{
           contador=0
         }
-        cantidad++;
-      }
-    }
-
-    //diagonal hacia la izquierda
-    contador = 0;
-    cantidad = 0;
-    for(let i=1; i<21;i++){
-      contador = 0;
-      for(let aux=i; aux<42; aux=aux+6){
-        if(aux>42){
-            contador=0
-        }
-        if(jugador==this.items[aux]){
-            contador++;
-            if(contador==4){
-              this.ganadorEncontrado=jugador;
-            }
-        }else{
-          contador=0
-        }
-        cantidad++;
-      }
-    }
+       }
+     }                 
+  
   }
 
 }
