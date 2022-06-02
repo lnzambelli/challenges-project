@@ -5,6 +5,8 @@ import { ConectaCuatroComponent } from './conecta-cuatro.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { FichasPipe } from './fichas.pipe';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { FichasPipe } from './fichas.pipe';
     CommonModule,
     ConectaCuatroRoutingModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    MatButtonModule,
+    MatIconModule
   ]
 })
 export class ConectaCuatroModule { }
