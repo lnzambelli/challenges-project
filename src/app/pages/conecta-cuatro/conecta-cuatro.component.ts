@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-conecta-cuatro',
@@ -12,7 +13,7 @@ export class ConectaCuatroComponent implements OnInit {
   numerosDeJugadas: number = 1;
   ganadorEncontrado: number = 0;
 
-  constructor() { }
+  constructor(private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.numerosDeJugadas = 1;
@@ -42,7 +43,7 @@ export class ConectaCuatroComponent implements OnInit {
       this.numerosDeJugadas%2 ? this.usuarioActivo=1 : this.usuarioActivo=2
     }
     else{
-      console.log("ya se ingreso una ficha")
+      this.snackBar.open('Ficha ya asignada, seleccione otra!!', 'Close', {duration: 2000})
     }
   }
 

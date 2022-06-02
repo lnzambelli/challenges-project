@@ -1,10 +1,10 @@
+<h1>Conecta 4</h1>
 <section class="resultado">
-    
     <mat-card class="titulo" *ngIf="numerosDeJugadas<43; else juegoTerminado">
         <button mat-fab color="primary" (click)="reinciarJuego()">
             <mat-icon>restart_alt</mat-icon>
         </button>
-        <h2>Turno del jugador Nº {{usuarioActivo}}</h2>
+        <h2 *ngIf="ganadorEncontrado==0">Turno del jugador Nº {{usuarioActivo}}</h2>
     </mat-card>
     <ng-template #juegoTerminado>Juego Terminado!!</ng-template>
 </section>

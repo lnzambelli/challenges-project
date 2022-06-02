@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarModule } from 'src/app/components/navbar/navbar.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { NavbarModule } from 'src/app/components/navbar/navbar.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NavbarModule
+    NavbarModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
