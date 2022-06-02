@@ -16,6 +16,12 @@ const routes: Routes = [
         (m) => m.HomeModule
       ),
   },
+  { path: 'conecta', 
+    loadChildren: () => 
+      import('./pages/conecta-cuatro/conecta-cuatro.module').then(
+        (m) => m.ConectaCuatroModule
+      ) 
+  },
   {
     path: '**',
     loadChildren: () =>

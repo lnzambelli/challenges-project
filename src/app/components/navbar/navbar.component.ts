@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, NgModule, OnInit } from '@angular/core';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -8,16 +9,17 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     'mat-toolbar {cursor: pointer}',
   ],
   template: `
-    <mat-toolbar>
+    <mat-toolbar (click)="navigateTo()">
         <span>Challenges Mouredev</span>
     </mat-toolbar>
   `,
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  ngOnInit(): void {
+  navigateTo(){
+    this.router.navigate(['home'])
   }
 
 }
