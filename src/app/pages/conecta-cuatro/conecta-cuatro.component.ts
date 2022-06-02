@@ -12,6 +12,7 @@ export class ConectaCuatroComponent implements OnInit {
   usuarioActivo: number = 1;
   numerosDeJugadas: number = 1;
   ganadorEncontrado: number = 0;
+  resultados: number[] = [0,0,0]
 
   constructor(private snackBar: MatSnackBar) { }
 
@@ -64,6 +65,8 @@ export class ConectaCuatroComponent implements OnInit {
             contador++;
             if(contador==4){
                 this.ganadorEncontrado=jugador;
+                this.resultados[jugador]++
+                console.log(this.resultados)
             }
         }else{
           contador=0

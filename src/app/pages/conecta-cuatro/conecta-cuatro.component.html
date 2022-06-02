@@ -1,6 +1,7 @@
 <h1>Conecta 4</h1>
 <section class="resultado">
     <mat-card class="titulo" *ngIf="numerosDeJugadas<43; else juegoTerminado">
+        <p>Resultado: {{resultados[1]}} a {{resultados[2]}} </p>
         <button mat-fab color="primary" (click)="reinciarJuego()">
             <mat-icon>restart_alt</mat-icon>
         </button>
