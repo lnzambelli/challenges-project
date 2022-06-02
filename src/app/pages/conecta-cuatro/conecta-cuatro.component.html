@@ -1,11 +1,18 @@
 <section class="resultado">
-    <mat-card class="titulo">Turno del jugador Nº {{usuarioActivo}}</mat-card>
+    <mat-card class="titulo" *ngIf="numerosDeJugadas<43; else juegoTerminado">Turno del jugador Nº {{usuarioActivo}}</mat-card>
+    <ng-template #juegoTerminado>Juego Terminado!!</ng-template>
 </section>
 
-<section >
+<section *ngIf="numerosDeJugadas<43 && ganadorEncontrado==0" >
     <mat-grid-list cols="7" >
         <mat-grid-tile *ngFor="let item of items; index as i" class="tablero" (click)="ponerFicha(i,item)">
             {{item | fichas}}
         </mat-grid-tile>
     </mat-grid-list>
+</section>
+
+<section *ngIf="ganadorEncontrado!=0">
+    <mat-card class="titulo" >
+        Ganoo del jugador Nº {{ganadorEncontrado}}
+    </mat-card>
 </section>

@@ -9,15 +9,17 @@ export class ConectaCuatroComponent implements OnInit {
 
   items: number[] = []
   usuarioActivo: number = 1;
-  numerosDeJugadas: number = 1
+  numerosDeJugadas: number = 1;
+  ganadorEncontrado: number = 0;
 
   constructor() { }
 
   ngOnInit(): void {
     this.numerosDeJugadas = 1;
+    this.ganadorEncontrado = 0;
     this.cargarArray();
   }
-  
+
 
   cargarArray(){
       for(let i=1; i<=42; i++){

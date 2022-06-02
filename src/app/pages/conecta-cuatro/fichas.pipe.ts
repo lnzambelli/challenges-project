@@ -8,9 +8,9 @@ export class FichasPipe implements PipeTransform {
   transform(value: number): string {
     let ficha = "";
     if (value==1){
-        ficha= '`X' //wind + .
+        ficha= '🔴' //wind + .
     }else if(value==2){
-      ficha= 'O'
+      ficha= '🔵'
     }
     
     return ficha;
