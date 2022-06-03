@@ -30,6 +30,11 @@ export class ConectaCuatroComponent implements OnInit {
     this.usuarioActivo = 1;
   }
 
+  reiniciarContador(){
+    this.resultados = [0,0,0]
+    this.reinciarJuego();
+  }
+
   cargarArray(){
       for(let i=1; i<=42; i++){
         this.items.push(0)

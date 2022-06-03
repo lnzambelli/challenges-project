@@ -7,6 +7,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { FichasPipe } from './fichas.pipe';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatChipsModule} from '@angular/material/chips';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import {MatIconModule} from '@angular/material/icon';
     MatCardModule,
     MatGridListModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatDividerModule,
+    MatChipsModule
   ]
 })
 export class ConectaCuatroModule { }

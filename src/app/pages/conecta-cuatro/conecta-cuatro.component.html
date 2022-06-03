@@ -1,7 +1,12 @@
 <h1>Conecta 4</h1>
 <section class="resultado">
     <mat-card class="titulo" *ngIf="numerosDeJugadas<43; else juegoTerminado">
-        <p>Resultado: {{resultados[1]}} a {{resultados[2]}} </p>
+        <div class="contadorPuntos">
+            <p>Jugador 1 '🔴' <mat-chip class="cantidadPuntos">{{resultados[1]}}</mat-chip></p>
+            <button mat-button color="primary" (click)="reiniciarContador()">Reiniciar contador</button>
+            <p>Jugador 2 '🟡' <mat-chip class="cantidadPuntos">{{resultados[2]}}</mat-chip></p>
+        </div>
+        <mat-divider></mat-divider>
         <button mat-fab color="primary" (click)="reinciarJuego()">
             <mat-icon>restart_alt</mat-icon>
         </button>
