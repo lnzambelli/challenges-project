@@ -59,4 +59,10 @@ export class EnciclopediaComponent implements OnInit {
     });
   }
 
+  applicarFiltro(e: any){
+    this.estaCargado = false;
+    this.swapiEnciclopedia.search(e.target.value).subscribe(data => this.parseData(data))
+    this.estaCargado = true;
+  }
+
 }

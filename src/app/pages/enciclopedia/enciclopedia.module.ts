@@ -8,6 +8,9 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTableModule} from '@angular/material/table';
 import {MatListModule} from '@angular/material/list';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +23,9 @@ import {MatListModule} from '@angular/material/list';
     MatProgressSpinnerModule,
     MatButtonModule,
     MatTableModule,
-    MatListModule  
+    MatListModule,
+    MatFormFieldModule,
+    MatInputModule  
   ]
 })
 export class EnciclopediaModule { }

@@ -4,6 +4,12 @@
     <mat-spinner ></mat-spinner>
 </div>
 
+<mat-form-field appearance="standard" class="filtroContainer">
+    <mat-label>Filtrar</mat-label>
+    <input matInput (keyup)="applicarFiltro($event)" placeholder="Filtro" #input>
+</mat-form-field>
+
+
 
 <mat-card *ngIf="this.estaCargado" class="listItems">
    <div *ngFor="let aux of this.arrPersonajes">
