@@ -1,1 +1,11 @@
 <h1>Enciclopedia </h1>
+<mat-spinner *ngIf="!this.estaCargado"></mat-spinner>
+
+<div *ngIf="this.estaCargado">
+   <div *ngFor="let aux of this.arrPersonajes">
+        <p>{{aux.name}}</p>
+   </div>
+</div>
+
+<button mat-button [disabled]="this.anteriorPag==null" (click)="antPagina()">prev</button>
+<button mat-button [disabled]="this.siguientePag==null" (click)="sigPagina()">next</button>

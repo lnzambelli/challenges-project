@@ -5,6 +5,8 @@ import { EnciclopediaRoutingModule } from './enciclopedia-routing.module';
 import { EnciclopediaComponent } from './enciclopedia.component';
 import {MatCardModule} from '@angular/material/card';
 import { DetallePersonajeComponent } from './detalle-personaje/detalle-personaje.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatButtonModule} from '@angular/material/button';
 
 
 
@@ -16,7 +18,9 @@ import { DetallePersonajeComponent } from './detalle-personaje/detalle-personaje
   imports: [
     CommonModule,
     EnciclopediaRoutingModule,
-    MatCardModule
+    MatCardModule,
+    MatProgressSpinnerModule,
+    MatButtonModule  
   ]
 })
 export class EnciclopediaModule { }

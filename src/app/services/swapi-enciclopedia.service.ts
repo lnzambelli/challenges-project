@@ -22,4 +22,5 @@ export class SwapiEnciclopediaService {
   get(page?: number): Observable<any> {
     return this.httpClient.get<any>(`${this.BASE_URL}/?page=${page || 1}`);
   }
+ 
 }
