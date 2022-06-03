@@ -1,11 +1,24 @@
 <h1>Enciclopedia </h1>
-<mat-spinner *ngIf="!this.estaCargado"></mat-spinner>
-
-<div *ngIf="this.estaCargado">
-   <div *ngFor="let aux of this.arrPersonajes">
-        <p>{{aux.name}}</p>
-   </div>
+<h2>Listado de personajes</h2>
+<div class="slideContenedor" *ngIf="!this.estaCargado">
+    <mat-spinner ></mat-spinner>
 </div>
 
-<button mat-button [disabled]="this.anteriorPag==null" (click)="antPagina()">prev</button>
-<button mat-button [disabled]="this.siguientePag==null" (click)="sigPagina()">next</button>
+
+<mat-card *ngIf="this.estaCargado" class="listItems">
+   <div *ngFor="let aux of this.arrPersonajes">
+        <mat-list role="list" class="filaPersonaje">
+            <mat-list-item role="listitem">
+                <span> {{aux.name}} </span>
+            </mat-list-item>
+            <button mat-button (click)="mostrarDetalles(aux)">+ detalles</button>
+        <mat-divider></mat-divider>
+      </mat-list>
+   </div>
+</mat-card>
+
+<section class="seccionBotones">
+    <button mat-button [disabled]="this.anteriorPag==null" (click)="antPagina()">prev</button>
+    <button mat-button [disabled]="this.siguientePag==null" (click)="sigPagina()">next</button>
+</section>
+
