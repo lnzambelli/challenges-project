@@ -42,9 +42,19 @@ export class ConectaCuatroComponent implements OnInit {
   }
 
   ponerFicha(i: number, item: number){
+    let aux = i+7;
+    while(aux <42){
+        if (this.items[aux]==0){
+            i=aux
+        }
+        aux=aux+7
+    }
+
     if (item==0){
       this.numerosDeJugadas++;
+      
       this.items[i] = this.usuarioActivo;
+
       this.comprobarResultados(this.usuarioActivo)
       this.numerosDeJugadas%2 ? this.usuarioActivo=1 : this.usuarioActivo=2
     }
