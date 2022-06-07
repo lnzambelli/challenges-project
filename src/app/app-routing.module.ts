@@ -32,6 +32,11 @@ const routes: Routes = [
   {
     path: 'detalle/:id', component: DetallePersonajeComponent
   },
+  { path: 'cuestionario', 
+    loadChildren: () => 
+    import('./pages/cuestionario/cuestionario.module').then(
+      (m) => m.CuestionarioModule) 
+  },
   {
     path: '**',
     loadChildren: () =>

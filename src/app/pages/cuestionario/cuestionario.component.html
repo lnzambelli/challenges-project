@@ -1,0 +1,16 @@
+<div *ngIf="this.pregActivada<=2">
+    <mat-card>
+        <button mat-fab  >
+          <span>{{contador}}</span>
+        </button>
+    </mat-card>
+</div>
+
+<app-pregunta [pregunta]="pregunta" (rta)="obtenerData($event)" *ngIf="this.pregActivada<=2"></app-pregunta>
+<div>
+    <mat-card *ngIf="this.pregActivada>2 && this.contador==0">
+        <h2>Finalizo el juego - puntos: {{puntos}}</h2>
+        <mat-divider></mat-divider>
+        <p *ngFor="let res of resultado; index as i"> Pregunta {{i}} : {{res | resultadoRta}}<mat-divider></mat-divider></p>
+    </mat-card>
+</div>
